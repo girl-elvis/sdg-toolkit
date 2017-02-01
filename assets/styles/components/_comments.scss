@@ -1,0 +1,19 @@
+
+.comment-list ol {
+  list-style: none;
+}
+
+// not sure if need this with uikit
+.comment-form p {
+  @extend .uk-form-controls-condensed;
+}
+// .comment-form input[type="text"],
+// .comment-form input[type="email"],
+// .comment-form input[type="url"],
+// .comment-form textarea {
+//   @extend .form-control;
+// }
+// .comment-form input[type="submit"] {
+//   @extend .btn;
+//   @extend .btn-secondary;
+// }

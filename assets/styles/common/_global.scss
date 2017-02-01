@@ -1,0 +1,13 @@
+
+.container {
+	 @extend .uk-container;
+	 @extend .uk-container-center; // centres things
+	//@extend $control-height;
+}
+
+// hide text for image replacement
+.hide-text {
+         text-indent: 100%;
+         white-space: nowrap;
+         overflow: hidden;
+}
