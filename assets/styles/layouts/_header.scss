@@ -2,3 +2,65 @@
 	@extend .uk-navbar-nav;
 	@extend .uk-hidden-small;
 }
+.banner{
+	background:  $midgrey url(../images/stripe_top.gif) repeat-x;
+	padding-top: 34px;
+	.uk-nav{
+		margin-top: 1.2em;
+	}
+	.brand{
+		font-family: $bitter;
+		font-size: 2.3em;
+		line-height: 1.2em;
+		letter-spacing: 50;
+		a {
+			color: $darkgrey;
+		}
+	}
+	.blogdesc {
+		font-family: $source;
+		font-size: $eighteenpt;
+	}
+
+
+	.uk-search{
+		background: white;
+		&:before {
+		    right: 0;
+		    left: auto;
+		    color: $darkgrey;	
+		}
+		.uk-search-field{
+			    padding: 0 30px 0 5px;
+		}
+	}
+	.find-nav{
+		text-transform: uppercase;
+		.find-label{
+			font-family: $bitter;
+
+			background-color: $brand-pink;
+			color: white;
+			padding-left: 5px;
+			margin-bottom: 5px;
+		}
+		.nav{
+			background-color: $brand-maroon;
+			li a{
+				color: white;
+				display: inline-block;
+				font-size: $eighteenpt;			
+			}
+			li:first-of-type::before{
+					margin-right: 0;
+					border-left: 0;
+			}
+		}
+	}
+	.menu-pages-nav-container{
+
+		a{
+			font-size: $eighteenpt;
+		}
+	}
+}
