@@ -4,18 +4,19 @@
 		echo "filter by";
 		switch ($tax) {
 			case 'goal':
-				$filter = 71;
+						$filter = 62;
 				break;
 			case 'region':
-				$filter = 74;
+				$filter = 63;
 				break;
 			case 'tool_type':
-				$filter = 73;
+				$filter = 64;
 				break;
 		}
 		if ($filter){ // If page needs a filter, display it.
 			echo '<div class="filterform">';
-			echo do_shortcode('[ULWPQSF id='. $filter. ']');
+  			echo do_shortcode('[searchandfilter id="'. $filter. '"  ]');
+			//echo do_shortcode('[ULWPQSF id='. $filter. ']');
 			echo '</div>';
 			 //echo do_shortcode('[searchandfilter id="'. $filter. '" show="results" ]');
 		}
