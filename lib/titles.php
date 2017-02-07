@@ -12,6 +12,7 @@ function title() {
     } else {
       return __('Latest Posts', 'sage');
     }
+  }elseif(is_front_page()){
   } elseif (is_archive()) {
     return get_the_archive_title();
   } elseif (is_search()) {

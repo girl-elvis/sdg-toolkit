@@ -1,0 +1,10 @@
+.sidebar-primary {
+	.main{
+		@extend .uk-width-small-2-3 ;
+		box-sizing: border-box;
+	}
+	.sidebar{
+		@extend .uk-width-small-1-3 ;
+		box-sizing: border-box;
+	}
+}

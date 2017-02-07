@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter:400,700|Source+Sans+Pro:400,400i,600&subset=latin-ext');
 $bitter :  'Bitter', serif;
 $source :  'Source Sans Pro', sans-serif;
+$base-body-font-family: $source;
+
 $fourteenpt: 1em;
 $eighteenpt: 1.2em;
 
 $base-link-color: #006fb8;
+$base-link-hover: #005188;
 
 $spacer: 1rem; // setting a referenced bootstrap variable
 $icon-font-path:                                 "../fonts" !default;
@@ -14,12 +17,21 @@ $icon-font-path:                                 "../fonts" !default;
 $brand-primary:         #27ae60;
 $midgrey: #E9E9E9;
 $darkgrey: #535353;
+$black: #333;
 
 $brand-pink : #CB0056;
 $brand-maroon: #8A0035;
 $brand-yellow: #8A0035;
 $brand-green: #289932;
 $brand-blue: #2056A8;
+$button-blue: #296CB7;
+$rollover-blue: #005188;
 
 // UIkit resets
 $navbar-background : none;
+$button-background: $button-blue;
+$button-hover-background: $rollover-blue;
+$button-color: white;
+$button-hover-color: white;
+$base-body-color: $black;
+$base-heading-color: $black;

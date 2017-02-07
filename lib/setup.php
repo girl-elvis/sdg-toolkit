@@ -85,6 +85,7 @@ function display_sidebar() {
     // EMF: CHANGED TO ADD WHICH ONES WE WANT RATHER THAN REMOVE THOSE WE DON'T.
     // The sidebar will be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
+    is_front_page(),
     //is_page(array("staff")), 
     //is_page_template('template-custom.php'),
   ]);

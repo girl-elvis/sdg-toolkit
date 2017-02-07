@@ -1,27 +1,25 @@
 <?php get_template_part('templates/page', 'header'); ?>
-<?php if(is_tax){ // Display filter form
+<?php if(is_tax()){ // Display filter form
 		$tax = get_query_var( 'taxonomy' );
 		echo "filter by";
 		switch ($tax) {
 			case 'goal':
-						$filter = 62;
+						$filter = 'filter-for-goal-page';
 				break;
 			case 'region':
-				$filter = 63;
+				$filter = 'filter-for-region-page';
 				break;
 			case 'tool_type':
-				$filter = 64;
+				$filter = 'filter-for-type-page';
 				break;
 		}
 		if ($filter){ // If page needs a filter, display it.
 			echo '<div class="filterform">';
-  			echo do_shortcode('[searchandfilter id="'. $filter. '"  ]');
+  			echo do_shortcode('[searchandfilter slug="'. $filter. '"  ]');
 			//echo do_shortcode('[ULWPQSF id='. $filter. ']');
 			echo '</div>';
 			 //echo do_shortcode('[searchandfilter id="'. $filter. '" show="results" ]');
-		}
-
-		
+		}		
 	} 
 ?>
 <div id="the_content">

@@ -1,44 +1,37 @@
 <?php 
 if (is_page(array('find-tools-by-region-country', 'find-tools-by-type', 'find-tools-by-goal'))){	
-	$slug = get_post_field( 'post_name', get_post() );
-	switch ($slug) {
-		case 'find-tools-by-region-country':
-			$term = 'region';
-			break;
-		case 'find-tools-by-type':
-			$term = 'tool_type';
-			break;
-		case 'find-tools-by-goal':
-			$term = 'goal';
-			break;
-		// default:
-		// 	# code...
-		// 	break;
-	}
-	$terms = get_terms( array(
-    'taxonomy' => $term,
-    'hide_empty' => false,
-	) );
+  get_template_part('templates/part', 'filters');
+} else if(is_front_page()){?>
+	<div class="uk-grid">
+		<div class="uk-width-1-1">
+		<h1>I'm Ready! Find Tools:</h1>
+		<h2>By Region / country:</h2>
+			<div class="themap">
+			  <div class="mapWrapper">
+                <div id="map"></div>
+                <div id="text"></div>
+        </div>
 
-	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-	    $count = count( $terms );
-	    $i = 0;
-	    $term_list = '<ul class="my_term-archive">';
-	    foreach ( $terms as $term ) {
-	        $i++;
-	        $term_list .= '<li><a href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '&nbsp;(' . $term->count . ')</a></li>';
-	        if ( $count != $i ) {           
-	        }
-	        else {
-	            $term_list .= '</ul>';
-	        }
-	    }
-	    echo $term_list;
-	}
+			</div>
+		</div>
+		<div class="uk-width-1-1 uk-width-small-1-2">
+			<h2>By tool type:</h2>
+			<a class="uk-button uk-text-uppercase" href="/find-tools-by-type/">Take me to the toolkit <i class="uk-icon-wrench"></i></a>
+			text from tool type page
+		</div>
+		<div class="uk-width-1-1 uk-width-small-1-2">
+			<h2>By goal:</h2>
+			<a class="uk-button uk-text-uppercase" href="/find-tools-by-goal/">Take me to the Goals <i class="uk-icon-list-ol"></i></a>
+			text from goals page
+		</div>
+	</div>
+	<?php
+} else {
+	the_content(); 
+	wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); 
 
 }
 
 
 
-the_content(); ?>
-<?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+

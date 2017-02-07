@@ -14,7 +14,7 @@
 		line-height: 1.2em;
 		letter-spacing: 50;
 		a {
-			color: $darkgrey;
+			color: $black;
 		}
 	}
 	.blogdesc {
@@ -38,7 +38,7 @@
 		text-transform: uppercase;
 		.find-label{
 			font-family: $bitter;
-
+			border-bottom: 2px solid $midgrey;
 			background-color: $brand-pink;
 			color: white;
 			padding-left: 5px;
@@ -63,4 +63,32 @@
 			font-size: $eighteenpt;
 		}
 	}
+}
+
+
+
+.menu-item-has-children i{padding-left: 0.4em;}
+
+
+.homebanner {
+	background: black;
+	.uk-panel{
+		flex:1;
+		display: flex;
+		align-items: stretch; // make my junk stretch the complete height sir mixalot.
+		flex-direction: column; // stuff can't be a row. gotstah be a column.
+		.uk-panel-footer {
+			 display: flex; // set the context
+			  flex: 1; // flex an equal amt of space yo!
+			  align-items: flex-end; // make that shit sit on the bottom dawg.
+			  justify-content: center; // center the text horizontally suckah. the poor man's text-align: center	
+		}
+	}
+	h2, h3{
+		color: white;
+		text-transform: uppercase;
+		font-family: $bitter;
+	}
+	h2{ }
+	hr{ margin: 15px 40% 30px 40%;}
 }

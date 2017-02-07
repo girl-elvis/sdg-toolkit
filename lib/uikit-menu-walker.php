@@ -172,6 +172,9 @@ class Walker_UIKIT extends Walker {
         $item_output .= '<a'. $attributes .'>';
         /** This filter is documented in wp-includes/post-template.php */
         $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+        if ($this->has_children && $depth == 0) {
+            $item_output .= '<i class="uk-icon-caret-down"></i>';
+        }
         $item_output .= '</a>';
         $item_output .= $args->after;
        
