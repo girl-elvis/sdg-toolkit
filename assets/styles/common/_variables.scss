@@ -2,6 +2,7 @@
 $bitter :  'Bitter', serif;
 $source :  'Source Sans Pro', sans-serif;
 $base-body-font-family: $source;
+$base-heading-font-family: $bitter;
 
 $fourteenpt: 1em;
 $eighteenpt: 1.2em;
@@ -27,10 +28,21 @@ $brand-blue: #2056A8;
 $button-blue: #296CB7;
 $rollover-blue: #005188;
 
+$enviro : #88C889;
+$part-enviro: #38FF2A ;
+
+
 // UIkit resets
 $navbar-background : none;
+$navbar-nav-hover-background : rgba(0,0,0,0.3);
+$navbar-nav-active-background:  white ;
+$navbar-nav-active-color: $black;
+$navbar-nav-onclick-background: rgba(0,0,0,0.3) ;
+$navbar-nav-onclick-color: rgba(255,0,0,0.8) ;
+$navbar-nav-focus-background:  rgba(0,0,0,0.5) ;
 $button-background: $button-blue;
 $button-hover-background: $rollover-blue;
+$button-active-background: $rollover-blue;
 $button-color: white;
 $button-hover-color: white;
 $base-body-color: $black;

@@ -28,23 +28,3 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
-
-
-// function sdg_enqueue_script() {
-//     wp_enqueue_script( 'raphael', 'dist/scripts/raphael.min.js', 'jquery' );
-//         wp_enqueue_script( 'scale.raphael', 'dist/scripts/scale.raphael.js', 'raphael' );
-//      wp_enqueue_script( 'map-paths', 'dist/scripts/map-paths.js', 'jquery' );
-//      wp_enqueue_script( 'map-init', 'dist/scripts/map-init.js', 'map-paths' );
-// }
-// //if (is_front_page()){
-//   add_action( 'wp_enqueue_scripts', 'sdg_enqueue_script' );
-// //}
-// function sdg_enqueue_style() {
-//     // wp_enqueue_style( 'raphael', 'dist/scripts/raphael.min.js', 'jquery' );
-//     //     wp_enqueue_script( 'scale.raphael', 'dist/scripts/scale.raphael.js', 'raphael' );
-//     //  wp_enqueue_script( 'map-paths', 'dist/scripts/map-paths.js', 'jquery' );
-//     //  wp_enqueue_script( 'map-init', 'dist/scripts/map-init.js', 'map-paths' );
-// }
-// //if (is_front_page()){
-//   //add_action( 'wp_enqueue_scripts', 'sdg_enqueue_style' );
-//}

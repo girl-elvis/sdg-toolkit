@@ -86,7 +86,7 @@ function display_sidebar() {
     // The sidebar will be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_front_page(),
-    //is_page(array("staff")), 
+    is_page(array("what-is-it", "inspire-me", "get-started", "find-tools-by-type")), 
     //is_page_template('template-custom.php'),
   ]);
   return apply_filters('sage/display_sidebar', $display);

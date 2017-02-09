@@ -1,12 +1,21 @@
 .nav {
 	@extend .uk-navbar-nav;
 	@extend .uk-hidden-small;
+	margin-bottom: 10px;
 }
 .banner{
 	background:  $midgrey url(../images/stripe_top.gif) repeat-x;
 	padding-top: 34px;
 	.uk-nav{
 		margin-top: 1.2em;
+	}
+	.nav-primary{
+		position: relative;
+		.pages-nav{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
 	}
 	.brand{
 		font-family: $bitter;
@@ -42,14 +51,19 @@
 			background-color: $brand-pink;
 			color: white;
 			padding-left: 5px;
-			margin-bottom: 5px;
 		}
+		// .nav > li.uk-active > a, .uk-navbar-nav > li.uk-active > a
 		.nav{
 			background-color: $brand-maroon;
-			li a{
-				color: white;
-				display: inline-block;
-				font-size: $eighteenpt;			
+			li {
+				a{
+					color: white;
+					display: inline-block;
+					font-size: $eighteenpt;			
+				}
+				// &.uk-active a{
+				// 	background-color: $brand-maroon;	
+				// }
 			}
 			li:first-of-type::before{
 					margin-right: 0;
@@ -57,10 +71,18 @@
 			}
 		}
 	}
-	.menu-pages-nav-container{
+	.pages-nav{
 
 		a{
 			font-size: $eighteenpt;
+		}
+		.nav > li.uk-open > a, 
+		.nav > li:hover > a, 
+		.nav > li > a:focus, 
+		.uk-navbar-nav > li.uk-open > a, 
+		.uk-navbar-nav > li:hover > a, 
+		.uk-navbar-nav > li > a:focus {
+			background-color: white;
 		}
 	}
 }

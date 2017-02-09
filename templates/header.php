@@ -49,12 +49,13 @@
 
       ?>
       </div>
-  
+      <div class="pages-nav">
       <?php
       if (has_nav_menu('primary_navigation')) :
         wp_nav_menu(['theme_location' => 'primary_navigation', 'container-class' => 'test', 'menu_class' => 'nav uk-navbar-flip', 'walker' => new Walker_UIKIT()]);
       endif;
       ?>
+      </div>
     </nav>
 
   </div>
