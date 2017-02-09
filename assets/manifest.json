@@ -19,7 +19,25 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "raphael.js": {
+      "files": [],
+      "vendor": [
+         "assets/scripts/raphael.min.js"
+      ]
+    },
+    "map.js": {
+      "files": [],
+      "vendor": [      
+        "assets/scripts/scale.raphael.js",
+        "assets/scripts/paths.js",
+        "assets/scripts/map-init.js."
+      ]
+    },
+    "settings.xml": {
+      "files": ["scripts/xml/settings"]
     }
+
   },
   "config": {
     "devUrl": "http://sdgtools/"

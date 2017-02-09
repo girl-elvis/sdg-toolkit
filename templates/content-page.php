@@ -2,6 +2,7 @@
 if (is_page(array('find-tools-by-region-country', 'find-tools-by-type', 'find-tools-by-goal'))){	
   get_template_part('templates/part', 'filters');
 } else if(is_front_page()){?>
+
 	<div class="uk-grid">
 		<div class="uk-width-1-1">
 		<h1>I'm Ready! Find Tools:</h1>
